@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main(){
+
+    int num, i, prim;
+
+    printf("Digite um numero: ");
+    scanf("%d", &num);
+
+    if(num <= 1){
+        prim = 0;
+    }else{
+        for(i = 2; i <= num / 2; i++){
+            if(num % i == 0){
+                prim = 0;
+                break;
+            }
+        }
+    }
+    if(prim){
+        printf("%d, numero primo.\n", num);
+    }else{
+        printf("%d, numero nao primo.\n", num);
+    }
+    
+    return 0;
+
+}
