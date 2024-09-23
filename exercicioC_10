@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char str[100];
+    int i, vogais = 0;
+
+    printf("Digite uma string: ");
+    fgets(str, sizeof(str), stdin);
+
+    for (i = 0; str[i] != '\0'; i++) {
+        char c = tolower(str[i]);
+        if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+            vogais++;
+        }
+    }
+
+    printf("Numero de vogais na string: %d\n", vogais);
+
+    return 0;
+}
